@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deadline-track"
+version = "0.1.0"
+description = "Track and predict deadlines for top-tier Computer Vision, IoT, and Drone conferences."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Hai Phong Tran" }]
+dependencies = []
+
+[project.scripts]
+deadline-track = "deadline_track.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
