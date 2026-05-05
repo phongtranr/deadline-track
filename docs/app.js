@@ -3,6 +3,7 @@ const state = {
   query: "",
   field: "all",
   status: "all",
+  lastFetchedAt: null,
 };
 
 const statusLabels = {
@@ -24,19 +25,27 @@ const relativeFormatter = new Intl.RelativeTimeFormat(undefined, { numeric: "aut
 
 async function main() {
   bindControls();
+  await loadDeadlineData();
+}
+
+async function loadDeadlineData() {
+  setRefreshState(true, "Refreshing latest generated data...");
 
   try {
-    const response = await fetch("./data/deadlines.json", { cache: "no-store" });
+    const response = await fetch(`./data/deadlines.json?ts=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`Unable to load deadline data: ${response.status}`);
     }
 
     const payload = await response.json();
     state.conferences = sortByDeadline(payload.conferences || []);
+    state.lastFetchedAt = new Date();
     renderGeneratedAt(payload.generated_at);
     renderFieldFilters(state.conferences);
     render();
+    setRefreshState(false, `Loaded at ${dateFormatter.format(state.lastFetchedAt)}`);
   } catch (error) {
+    setRefreshState(false, "Refresh failed. Please try again.");
     showError(error);
   }
 }
@@ -51,19 +60,29 @@ function bindControls() {
     state.status = event.target.value;
     render();
   });
+
+  document.querySelector("#refresh-data").addEventListener("click", () => {
+    loadDeadlineData();
+  });
 }
 
 function renderFieldFilters(conferences) {
   const fields = Array.from(new Set(conferences.flatMap((conference) => conference.fields))).sort();
   const fieldFilter = document.querySelector("#field-filter");
+  const selectedField = state.field;
   fieldFilter.innerHTML = `<option value="all">All areas</option>${fields
     .map((field) => `<option value="${escapeAttribute(field)}">${escapeHtml(field)}</option>`)
     .join("")}`;
+  fieldFilter.value = fields.includes(selectedField) ? selectedField : "all";
+  state.field = fieldFilter.value;
 
-  fieldFilter.addEventListener("change", (event) => {
-    state.field = event.target.value;
-    render();
-  });
+  if (!fieldFilter.dataset.bound) {
+    fieldFilter.addEventListener("change", (event) => {
+      state.field = event.target.value;
+      render();
+    });
+    fieldFilter.dataset.bound = "true";
+  }
 }
 
 function renderGeneratedAt(value) {
@@ -173,6 +192,14 @@ function showError(error) {
       <p>${escapeHtml(error.message)}</p>
     </article>
   `;
+}
+
+function setRefreshState(isRefreshing, message) {
+  const button = document.querySelector("#refresh-data");
+  const status = document.querySelector("#refresh-status");
+  button.disabled = isRefreshing;
+  button.textContent = isRefreshing ? "Refreshing..." : "Refresh latest data";
+  status.textContent = message;
 }
 
 function escapeHtml(value) {
