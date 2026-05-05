@@ -58,3 +58,28 @@ def test_predicts_next_biennial_deadline() -> None:
     assert deadline.year == 2027
     assert deadline.month == 3
     assert deadline.day == 7
+
+
+def test_prediction_uses_deadline_calendar_year_for_prior_year_submissions() -> None:
+    conference = Conference(
+        slug="demo",
+        name="DemoConf",
+        tier="A*",
+        fields=("Computer Vision",),
+        official_url="https://example.test",
+        deadline_urls=(),
+        deadline_keywords=("submission deadline",),
+        historical_deadlines=(
+            HistoricalDeadline(2024, _dt("2023-11-17T23:59:00"), "CFP"),
+            HistoricalDeadline(2025, _dt("2024-11-14T23:59:00"), "CFP"),
+            HistoricalDeadline(2026, _dt("2025-11-13T23:59:00"), "CFP"),
+        ),
+    )
+
+    predicted = predict_next_deadline(conference, now=_dt("2026-05-05T00:00:00"))
+
+    deadline, _ = predicted
+    assert deadline is not None
+    assert deadline.year == 2026
+    assert deadline.month == 11
+    assert deadline.day == 13

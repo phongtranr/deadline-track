@@ -62,3 +62,32 @@ def test_tracker_falls_back_to_prediction_when_live_crawl_fails() -> None:
     assert result.status == DeadlineStatus.PREDICTED
     assert result.deadline is not None
     assert result.deadline.year == 2026
+
+
+def test_tracker_ignores_stale_live_deadline() -> None:
+    conference = Conference(
+        slug="demo",
+        name="DemoConf",
+        tier="A*",
+        fields=("Drone",),
+        official_url="https://example.test",
+        deadline_urls=("https://example.test/cfp",),
+        deadline_keywords=("paper submission deadline",),
+        historical_deadlines=(HistoricalDeadline(2025, _dt("2024-09-15T23:59:00"), "CFP"),),
+    )
+
+    tracker = DeadlineTracker(
+        (conference,),
+        fetcher=lambda url: CrawlResult(
+            url=url,
+            status="ok",
+            text="Important dates: paper submission deadline is September 15, 2024 AoE.",
+        ),
+        now=lambda: _dt("2025-05-01T00:00:00"),
+    )
+
+    result = tracker.track()[0]
+
+    assert result.status == DeadlineStatus.PREDICTED
+    assert result.deadline is not None
+    assert result.deadline.year == 2025

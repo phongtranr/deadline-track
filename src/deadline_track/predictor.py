@@ -20,7 +20,7 @@ def predict_next_deadline(conference: Conference, now: datetime | None = None) -
 
     latest = history[-1]
     cadence = _conference_cadence_years(conference)
-    next_year = latest.year + cadence
+    next_year = latest.deadline.year + cadence
     while _replace_year_safely(latest.deadline, next_year) <= now:
         next_year += cadence
 

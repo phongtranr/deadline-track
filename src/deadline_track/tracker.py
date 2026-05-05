@@ -64,7 +64,7 @@ class DeadlineTracker:
                 continue
 
             deadline = extract_deadline(crawl.text, conference.deadline_keywords)
-            if deadline is None:
+            if deadline is None or deadline <= self._now():
                 continue
 
             return DeadlineResult(
