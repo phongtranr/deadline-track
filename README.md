@@ -76,8 +76,11 @@ To enable the public website:
 
 1. Open the repository on GitHub.
 2. Go to **Settings > Pages**.
-3. Set **Source** to **GitHub Actions**.
-4. Run the `Deploy static deadline tracker` workflow or merge to `main`.
+3. Run the `Deploy static deadline tracker` workflow or merge to `main`.
+
+The workflow configures GitHub Pages automatically. If you prefer to configure
+Pages manually first, set **Source** to **GitHub Actions** in
+**Settings > Pages**.
 
 Local static build:
 

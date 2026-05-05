@@ -101,6 +101,21 @@ h1 {
   font-size: 0.92rem;
 }
 
+.pill--button {
+  width: auto;
+  cursor: pointer;
+}
+
+.pill--button:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.pill--button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
 main {
   max-width: 76rem;
   margin: 0 auto;
@@ -141,7 +156,8 @@ select {
 }
 
 input:focus,
-select:focus {
+select:focus,
+button:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 4px rgba(36, 88, 211, 0.12);
 }
