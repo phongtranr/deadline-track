@@ -1,0 +1,315 @@
+{
+  "generated_at": "2026-05-05T23:34:40.763836Z",
+  "live_crawl": false,
+  "conferences": [
+    {
+      "slug": "cvpr",
+      "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "tier": "A*",
+      "fields": [
+        "Computer Vision"
+      ],
+      "official_url": "https://cvpr.thecvf.com/",
+      "deadline_urls": [
+        "https://cvpr.thecvf.com/Conferences/2026/CallForPapers",
+        "https://cvpr.thecvf.com/Conferences/2026/Dates",
+        "https://cvpr.thecvf.com/"
+      ],
+      "status": "predicted",
+      "deadline_utc": "2026-11-13T23:59:00Z",
+      "days_until": 192,
+      "source_url": null,
+      "source_text": null,
+      "confidence": 0.65,
+      "explanation": "Predicted from 3 historical deadlines using a 1-year cadence.",
+      "historical_deadlines": [
+        {
+          "conference_year": 2024,
+          "deadline_utc": "2023-11-17T23:59:00Z",
+          "source": "Official call for papers"
+        },
+        {
+          "conference_year": 2025,
+          "deadline_utc": "2024-11-14T23:59:00Z",
+          "source": "Official call for papers"
+        },
+        {
+          "conference_year": 2026,
+          "deadline_utc": "2025-11-13T23:59:00Z",
+          "source": "Official call for papers"
+        }
+      ]
+    },
+    {
+      "slug": "iccv",
+      "name": "IEEE/CVF International Conference on Computer Vision",
+      "tier": "A*",
+      "fields": [
+        "Computer Vision"
+      ],
+      "official_url": "https://iccv.thecvf.com/",
+      "deadline_urls": [
+        "https://iccv.thecvf.com/Conferences/2025/CallForPapers",
+        "https://iccv.thecvf.com/Conferences/2025/Dates",
+        "https://iccv.thecvf.com/"
+      ],
+      "status": "predicted",
+      "deadline_utc": "2027-03-07T23:59:00Z",
+      "days_until": 306,
+      "source_url": null,
+      "source_text": null,
+      "confidence": 0.65,
+      "explanation": "Predicted from 3 historical deadlines using a 2-year cadence.",
+      "historical_deadlines": [
+        {
+          "conference_year": 2021,
+          "deadline_utc": "2021-03-17T23:59:00Z",
+          "source": "Official call for papers"
+        },
+        {
+          "conference_year": 2023,
+          "deadline_utc": "2023-03-08T23:59:00Z",
+          "source": "Official call for papers"
+        },
+        {
+          "conference_year": 2025,
+          "deadline_utc": "2025-03-07T23:59:00Z",
+          "source": "Official call for papers"
+        }
+      ]
+    },
+    {
+      "slug": "eccv",
+      "name": "European Conference on Computer Vision",
+      "tier": "A",
+      "fields": [
+        "Computer Vision"
+      ],
+      "official_url": "https://eccv.ecva.net/",
+      "deadline_urls": [
+        "https://eccv.ecva.net/Conferences/2026/SubmissionPolicies",
+        "https://eccv.ecva.net/Conferences/2026/Dates",
+        "https://eccv.ecva.net/"
+      ],
+      "status": "predicted",
+      "deadline_utc": "2028-03-06T12:59:00Z",
+      "days_until": 670,
+      "source_url": null,
+      "source_text": null,
+      "confidence": 0.65,
+      "explanation": "Predicted from 3 historical deadlines using a 2-year cadence.",
+      "historical_deadlines": [
+        {
+          "conference_year": 2022,
+          "deadline_utc": "2022-03-07T23:59:00Z",
+          "source": "Official important dates"
+        },
+        {
+          "conference_year": 2024,
+          "deadline_utc": "2024-03-07T12:59:00Z",
+          "source": "Official important dates"
+        },
+        {
+          "conference_year": 2026,
+          "deadline_utc": "2026-03-06T12:59:00Z",
+          "source": "Official important dates"
+        }
+      ]
+    },
+    {
+      "slug": "sigcomm",
+      "name": "ACM SIGCOMM",
+      "tier": "A*",
+      "fields": [
+        "IoT",
+        "Networking"
+      ],
+      "official_url": "https://conferences.sigcomm.org/sigcomm/",
+      "deadline_urls": [
+        "https://conferences.sigcomm.org/sigcomm/2026/cfp.html",
+        "https://conferences.sigcomm.org/sigcomm/2026/",
+        "https://conferences.sigcomm.org/sigcomm/"
+      ],
+      "status": "predicted",
+      "deadline_utc": "2027-01-31T23:59:00Z",
+      "days_until": 271,
+      "source_url": null,
+      "source_text": null,
+      "confidence": 0.65,
+      "explanation": "Predicted from 3 historical deadlines using a 1-year cadence.",
+      "historical_deadlines": [
+        {
+          "conference_year": 2024,
+          "deadline_utc": "2024-02-02T23:59:00Z",
+          "source": "Official CFP"
+        },
+        {
+          "conference_year": 2025,
+          "deadline_utc": "2025-01-31T23:59:00Z",
+          "source": "Official CFP"
+        },
+        {
+          "conference_year": 2026,
+          "deadline_utc": "2026-01-31T23:59:00Z",
+          "source": "Official CFP"
+        }
+      ]
+    },
+    {
+      "slug": "sensys",
+      "name": "ACM Conference on Embedded Networked Sensor Systems",
+      "tier": "A",
+      "fields": [
+        "IoT",
+        "Sensor Networks"
+      ],
+      "official_url": "https://sensys.acm.org/",
+      "deadline_urls": [
+        "https://sensys.acm.org/2026/",
+        "https://sensys.acm.org/2026/cfp/",
+        "https://sensys.acm.org/"
+      ],
+      "status": "predicted",
+      "deadline_utc": "2027-04-03T23:59:00Z",
+      "days_until": 333,
+      "source_url": null,
+      "source_text": null,
+      "confidence": 0.65,
+      "explanation": "Predicted from 3 historical deadlines using a 1-year cadence.",
+      "historical_deadlines": [
+        {
+          "conference_year": 2023,
+          "deadline_utc": "2023-04-06T23:59:00Z",
+          "source": "Official CFP"
+        },
+        {
+          "conference_year": 2024,
+          "deadline_utc": "2024-04-04T23:59:00Z",
+          "source": "Official CFP"
+        },
+        {
+          "conference_year": 2025,
+          "deadline_utc": "2025-04-03T23:59:00Z",
+          "source": "Official CFP"
+        }
+      ]
+    },
+    {
+      "slug": "ipsn",
+      "name": "ACM/IEEE International Conference on Information Processing in Sensor Networks",
+      "tier": "A",
+      "fields": [
+        "IoT",
+        "Sensor Networks"
+      ],
+      "official_url": "https://ipsn.acm.org/",
+      "deadline_urls": [
+        "https://ipsn.acm.org/2026/",
+        "https://ipsn.acm.org/2026/call-for-papers/",
+        "https://ipsn.acm.org/"
+      ],
+      "status": "predicted",
+      "deadline_utc": "2026-10-15T23:59:00Z",
+      "days_until": 163,
+      "source_url": null,
+      "source_text": null,
+      "confidence": 0.65,
+      "explanation": "Predicted from 3 historical deadlines using a 1-year cadence.",
+      "historical_deadlines": [
+        {
+          "conference_year": 2024,
+          "deadline_utc": "2023-10-17T23:59:00Z",
+          "source": "Official CFP"
+        },
+        {
+          "conference_year": 2025,
+          "deadline_utc": "2024-10-16T23:59:00Z",
+          "source": "Official CFP"
+        },
+        {
+          "conference_year": 2026,
+          "deadline_utc": "2025-10-15T23:59:00Z",
+          "source": "Official CFP"
+        }
+      ]
+    },
+    {
+      "slug": "icra",
+      "name": "IEEE International Conference on Robotics and Automation",
+      "tier": "A",
+      "fields": [
+        "Drone",
+        "Robotics"
+      ],
+      "official_url": "https://www.ieee-icra.org/",
+      "deadline_urls": [
+        "https://2026.ieee-icra.org/",
+        "https://2026.ieee-icra.org/call-for-papers/",
+        "https://www.ieee-icra.org/"
+      ],
+      "status": "predicted",
+      "deadline_utc": "2026-09-15T23:59:00Z",
+      "days_until": 133,
+      "source_url": null,
+      "source_text": null,
+      "confidence": 0.65,
+      "explanation": "Predicted from 3 historical deadlines using a 1-year cadence.",
+      "historical_deadlines": [
+        {
+          "conference_year": 2024,
+          "deadline_utc": "2023-09-15T23:59:00Z",
+          "source": "Official CFP"
+        },
+        {
+          "conference_year": 2025,
+          "deadline_utc": "2024-09-15T23:59:00Z",
+          "source": "Official CFP"
+        },
+        {
+          "conference_year": 2026,
+          "deadline_utc": "2025-09-15T23:59:00Z",
+          "source": "Official CFP"
+        }
+      ]
+    },
+    {
+      "slug": "iros",
+      "name": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "tier": "A",
+      "fields": [
+        "Drone",
+        "Robotics"
+      ],
+      "official_url": "https://www.ieee-iros.org/",
+      "deadline_urls": [
+        "https://www.iros26.org/",
+        "https://www.iros26.org/call-for-papers",
+        "https://www.ieee-iros.org/"
+      ],
+      "status": "predicted",
+      "deadline_utc": "2027-03-01T23:59:00Z",
+      "days_until": 300,
+      "source_url": null,
+      "source_text": null,
+      "confidence": 0.65,
+      "explanation": "Predicted from 3 historical deadlines using a 1-year cadence.",
+      "historical_deadlines": [
+        {
+          "conference_year": 2024,
+          "deadline_utc": "2024-03-01T23:59:00Z",
+          "source": "Official CFP"
+        },
+        {
+          "conference_year": 2025,
+          "deadline_utc": "2025-03-01T23:59:00Z",
+          "source": "Official CFP"
+        },
+        {
+          "conference_year": 2026,
+          "deadline_utc": "2026-03-01T23:59:00Z",
+          "source": "Official CFP"
+        }
+      ]
+    }
+  ]
+}
