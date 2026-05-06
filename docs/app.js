@@ -25,11 +25,11 @@ const relativeFormatter = new Intl.RelativeTimeFormat(undefined, { numeric: "aut
 
 async function main() {
   bindControls();
-  await loadDeadlineData();
+  await loadDeadlineData({ disableRefreshButton: false });
 }
 
-async function loadDeadlineData() {
-  setRefreshState(true, "Refreshing latest generated data...");
+async function loadDeadlineData({ disableRefreshButton = true } = {}) {
+  setRefreshState(disableRefreshButton, "Refreshing latest generated data...");
 
   try {
     const response = await fetch(`./data/deadlines.json?ts=${Date.now()}`, { cache: "no-store" });
@@ -61,7 +61,8 @@ function bindControls() {
     render();
   });
 
-  document.querySelector("#refresh-data").addEventListener("click", () => {
+  document.querySelector("#refresh-data").addEventListener("click", (event) => {
+    event.preventDefault();
     loadDeadlineData();
   });
 }
